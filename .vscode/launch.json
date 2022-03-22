@@ -8,10 +8,10 @@
             "type": "cppdbg",
             "externalConsole": false,
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/build/redragon_k530.elf",
+            "program": "${workspaceRoot}/build/jumploader-redragon_k530.bin",
             "request": "launch",
             "servertype": "openocd",
-            "debugServerArgs": "-f C:/Users/fkpwo/Downloads/openocd-v0.11.0-i686-w64-mingw32/6064.cfg",
+            "debugServerArgs": "-f /home/fan/source/repo/sonix-keyboard-bootloader/6064.cfg",
             "setupCommands": [
                 {
                     "text": "-target-select remote localhost:3333",
@@ -19,7 +19,7 @@
                     "ignoreFailures": false
                 },
                 {
-                    "text": "-file-exec-and-symbols ${workspaceRoot}/build/redragon_k530.elf",
+                    "text": "-file-exec-and-symbols ${workspaceRoot}/build/jumploader-redragon_k530.bin",
                     "description": "load file",
                     "ignoreFailures": false
                 },
@@ -52,6 +52,11 @@
                 "programOutput": true,
                 "exceptions": true
             },
+            "linux": {
+                "MIMode": "gdb",
+                "MIDebuggerPath": "/usr/bin/gdb",
+                "debugServerPath": "openocd"
+            },
             "windows": {
                 "MIMode": "gdb",
                 "MIDebuggerPath": "C:/Users/fkpwo/Downloads/xpack-arm-none-eabi-gcc-10.3.1-2.3/bin/arm-none-eabi-gdb.exe",
@@ -66,7 +71,7 @@
                         "ignoreFailures": false
                     },
                     {
-                        "text": "-file-exec-and-symbols ${workspaceRootFolderName}.elf",
+                        "text": "-file-exec-and-symbols ${workspaceRootFolderName}/build/jumploader-redragon_k530.bin",
                         "description": "load file",
                         "ignoreFailures": false
                     },
