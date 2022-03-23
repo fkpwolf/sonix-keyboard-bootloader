@@ -1,5 +1,6 @@
 {
     // https://gist.github.com/janjongboom/51f2edbee8c965741465fa5feefe4cf1
+    // https://gist.github.com/kukosek/4570524e33306bc5d5203aaee5167fd0
     // https://github.com/smp4488/dk63/blob/master/rpi3.cfg
     "version": "0.2.0",
     "configurations": [
@@ -55,7 +56,9 @@
             "linux": {
                 "MIMode": "gdb",
                 "MIDebuggerPath": "/usr/bin/gdb",
-                "debugServerPath": "openocd"
+                "debugServerPath": "openocd",
+                "filterStderr":true,
+                "filterStdout":false
             },
             "windows": {
                 "MIMode": "gdb",
